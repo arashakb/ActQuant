@@ -1,0 +1,6 @@
+set(TARGET quantize-vision)
+add_executable(${TARGET} quantize-vision.cpp)
+install(TARGETS ${TARGET} RUNTIME)
+target_link_libraries(${TARGET} PRIVATE ggml)
+target_include_directories(${TARGET} PRIVATE ${CMAKE_SOURCE_DIR}/ggml/include)
+target_compile_features(${TARGET} PRIVATE cxx_std_17)

@@ -1,0 +1,35 @@
+# Build outputs
+build/
+build-*/
+build_oft/
+build_openpi/
+
+# Vendored tokenizers (unzipped on first build)
+vendor/tokenizers-cpp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.python-version
+
+# GGUF artifacts and calibration caches — too large for git, regenerate locally
+*.gguf
+*.npz
+*.npy
+tools/hsic/scores/
+tools/hsic/allocations/
+tools/fisher-diag/*_gpu_results/
+tools/fisher-diag/action_analysis_out/
+/tmp/hsic_acts_*.npz
+
+# Editor / IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Local conveniences
+.claude/
+.envrc
+*.local
